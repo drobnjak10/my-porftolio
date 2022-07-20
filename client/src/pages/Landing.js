@@ -15,6 +15,10 @@ const Landing = () => {
           Get Started
         </a>
       </div>
+
+      <div className="image">
+        <img src="/vector.png" alt="" />
+      </div>
     </div>
   );
 };
