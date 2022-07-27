@@ -1,8 +1,28 @@
 @import "./styles/variables";
 
+body {
+  background-color: $primary-black;
+}
+
 .app {
   background-color: $primary-black;
   width: 100%;
+  animation: display 1.8s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, $primary-green);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, $primary-red);
 }
 
 .animate {
@@ -28,13 +48,72 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
+  margin: 50px 0;
 
   &.about {
     background-color: $primary-black;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+
+    .left,
+    .right {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        animation: display 1s;
+      }
+
+      .content {
+        width: 60%;
+
+        h3 {
+          margin: 0;
+          color: $primary-green;
+          text-transform: uppercase;
+          text-transform: uppercase;
+        }
+
+        h1 {
+          margin: 0;
+          margin-top: 10px;
+        }
+
+        p {
+          color: #999d9f;
+        }
+      }
+
+    }
+    &.active {
+      .left, .right {
+        img {
+          animation: wide 1s;
+        }
+
+        h3 {
+          animation: .6s display;
+        }
+        
+        h1 {
+          animation: 1s display;
+        }
+        
+        p {
+          animation: .8s display;
+        }
+      }
+
+    
+    }
   }
 
   &.landing {
@@ -97,7 +176,7 @@
         border: 1px solid $primary-green;
         padding: 10px;
         color: $primary-green;
-        transition: .4s ease all;
+        transition: 0.4s ease all;
         text-transform: uppercase;
         font-weight: bold;
 
@@ -110,7 +189,7 @@
       &.active {
         opacity: 1;
         span {
-          animation: display .4s;
+          animation: display 0.4s;
         }
 
         h1 {
@@ -128,6 +207,35 @@
 
       img {
         width: 100%;
+        background-color: transparent;
+        border: none;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &.works {
+    width: 100%;
+    .container {
+      padding: 80px 0;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h2 {
+        color: $primary-green;
+        text-transform: uppercase;
+      }
+
+      .line {
+        width: 50px;
+        margin: 0 auto;
+        height: 3px;
+        background-color: $primary-green;
       }
     }
   }
@@ -138,12 +246,37 @@
     opacity: 0;
   }
 
-
   80% {
     opacity: 0;
   }
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes wide {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  20% {
+    width: 20%;
+  }
+
+  40% {
+    width: 40%;
+  }
+
+  80% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
   }
 }

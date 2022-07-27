@@ -24,6 +24,9 @@ const Navbar = () => {
           <div className="link">
             <a href="#">Contact</a>
           </div>
+          <div className="link resume">
+            <a href="#">Resume</a>
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Landing = () => {
     <div className="section landing">
       <div className={`content ${isInViewport && "active"} `} ref={ref}>
         <span>Hello Friend, I'm</span>
-        <h1>David Drobnjak</h1>
+        <h1>John Doe</h1>
         <h3>Full Stack Web Developer</h3>
         <a href="#" className="btn">
           Get Started
@@ -17,7 +17,7 @@ const Landing = () => {
       </div>
 
       <div className="image">
-        <img src="/vector.png" alt="" />
+        <img src="/avatar-vector.png" alt="" />
       </div>
     </div>
   );

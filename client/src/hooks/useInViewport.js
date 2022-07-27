@@ -11,9 +11,8 @@ export function useIsInViewport(ref) {
     []
   );
 
-  useEffect(() => {
+  useEffect((e) => {
     observer.observe(ref.current);
-
     return () => {
       observer.disconnect();
     };
