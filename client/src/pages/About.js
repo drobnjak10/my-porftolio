@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import Book from "../components/Book/Book";
-import { useIsInViewport } from "../hooks/useInViewport";
 import Typed from "react-typed";
+import { useIsInViewport } from "../hooks/useInViewport";
 
 const About = () => {
   const ref = useRef(null);
@@ -10,7 +9,7 @@ const About = () => {
   console.log("custom about", isInViewport);
 
   return (
-    <div className={`section about ${isInViewport && "active"} `} ref={ref}>
+    <div className={`section about ${isInViewport && "active"} `} ref={ref} id="about">
       <div className="left">
         <img src="/about.jpg" alt="" />
       </div>

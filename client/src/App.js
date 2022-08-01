@@ -5,6 +5,8 @@ import Icons from "./components/Icons";
 import Loader from "./components/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 import Landing from "./pages/Landing";
 import Works from "./pages/Works";
 
@@ -26,10 +28,12 @@ function App() {
       <div class="force-overflow"></div>
       <Navbar />
       <Landing />
-      <About />
-      <Works />
-      <Icons />
-      <Email />
+      {/* <About /> */}
+      {/* <Experience /> */}
+      {/* <Works /> */}
+      {/* <Contact /> */}
+      {/* <Icons /> */}
+      {/* <Email /> */}
     </div>
   );
 }

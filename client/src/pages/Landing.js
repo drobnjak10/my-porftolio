@@ -6,7 +6,7 @@ const Landing = () => {
   const isInViewport = useIsInViewport(ref);
 
   return (
-    <div className="section landing">
+    <div className="section landing" id="home">
       <div className={`content ${isInViewport && "active"} `} ref={ref}>
         <span>Hello Friend, I'm</span>
         <h1>John Doe</h1>
